@@ -1,41 +1,36 @@
 def main():
-    # 1) Subscripts in Python lists (arrays)
-    l1 = [2,3,4]
-    l1[0] = 12
-    item1 = l1[1]
+    # 1) Legal Subscripts
+    list1 = [] 
 
-    # 2 Check subscript expression element range checked
-    try:
-        item1 = l1[100]
-    except:
-        print("Subscript checks range")
-    
+    # 2) Element reference range check 
+    # list1[len(list1)] # generates out of bounds error
 
-    # 5) multidimensional list
-    multiDimList = [[1,2], [2,4]]
-    # ragged list
-    raggedList = [[1,2,3], [2,4]]
+    # 5) Ragged & Multidimensional 
+    multi_dim_list = [[1,2], [2,4]]
+    ragged_list = [[1,2,3], [2,4]]
 
+    # 7) Array init
+    list_growable = [1, 2, 3, 4, 5]
 
-    # 6) max number ob subscripts
-    growableList = [2, 4, 5, 123, 23]
-    max_len = growableList[len(growableList)-1]
+    # 8) Slices
+    slice = list_growable[2:4] # [3, 4]
 
-
-    # 8) slices
-    slice = growableList[2:4] # [5, 23]
-    
     # 9) Operators
     l1 = [1]
-    l2 = [2]
-    l3 = l1 + l2
-    l1 += l3 
-    l1 == l3  
-    l3[0] = 23
+    l2 = [2, 3] # []
+    l3 = l1 + l2 # +
+    l1 += l3  # +=
+    l1 == l3  # ==
+    l1 != l3 # !=
+    l1 *= 2 # *= 
+    l1 = l1 * 2 # *  
+    l3[0] = 23 # []=
 
-    # 10) Associative arrays dictionaries
-    assoc_array = {'color': 'blue', 'age': 20}
- 
+    # 10) Associative arrays
+    assoc_array = {'CS315': 'Programming Languages', 'CS224': 'Computer Organization'}
+
+   
+   
 
 if __name__ == "__main__":
     main()

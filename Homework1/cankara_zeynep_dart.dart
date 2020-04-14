@@ -1,45 +1,33 @@
 main() {
-  // 1) Subscripts in Dart arrays
-  List<int> list = [];
-  // fixed length array
-  List<int> fixedLengthList = new List(5);
-  // dynamic size  array
-  List<int> growableList = [1, 2];
-  // set 1st item of the list to 120. 
-  fixedLengthList[0] = 120; // fixedLengthList[0] == 120
-  // read from array
-  var item1 = fixedLengthList[0]; // 120
+  // 1) Legal Subscripts
+  List<int> list1 = [];
 
-  // 5) multidimensional list
+  // 2) Element reference range check 
+  //var a = listGrowable[listGrowable.length]; // index out of bounds error
+
+  // 5) Ragged & Multidimensional 
   List<List<int>> multiDimList = [[1,2], [2,4]];
   // ragged list
   List<List<int>> raggedList = [[1,2,3], [2,4]];
-  
-  // 6) Maximum number of  subscripts
-  try{
-    var a = growableList[growableList.length];
-  }catch(e){
-    print("Can't access array[length]");
-  }
-  var b = growableList[growableList.length-1];
-  print("Accessing array[length-1]");
 
-  // 7) Initializing a array object with size 6
-  List<int> fixedLengthList2 = new List(6);
+  // 7) Array init
+  // fixed length array
+  List<int> listFixedLength= new List(5);
+  // dynamic size  array
+  List<int> listGrowable = [1, 2, 3];
 
-  // 8) Slices via sublist method
-  growableList = [2, 4, 5, 123, 23];
-  List<int> slice = growableList.sublist(2,4); // [5, 123] 
+  // 8) Slices
+  listGrowable = [1, 2, 3, 4, 5];
+  List<int> slice = listGrowable.sublist(2,4); // [3, 4] 
 
-  // 9) Operators test
+  // 9) Operators +, ==, [], []=
   List<int> l1 = [1];
-  List<int> l2 = [2];
+  List<int> l2 = [2, 3];
   List<int> l3 = l1 + l2; 
   print(l1 == l2);
+  listFixedLength[0] = 120; // fixedLengthList[0] == 120
+  var item1 = listFixedLength[0]; // item1 == 120
 
-
-  // 10) Associative array example
-  var assocArray = {'color': "blue", 'age': 20}; 
-
-
+  // 10) Associative arrays 
+  var assocArray = {'CS315': "Programming Languages", 'CS224':'Computer Organization'};
 }
