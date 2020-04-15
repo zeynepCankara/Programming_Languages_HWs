@@ -5,6 +5,9 @@ $array1 = array(1, 2, 3, 4, 5);
 // as of PHP 5.4
 // $array2 = [1, 2, 3, 4, 5]; 
 
+$array1[0];
+$array1{0};  
+
 // 2) Element reference range check 
 var_dump($array1[100]); // not generates index out of bounds error
 

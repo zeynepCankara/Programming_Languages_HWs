@@ -1,6 +1,7 @@
 def main():
     # 1) Legal Subscripts
-    list1 = [] 
+    list1 = [1,2,3]
+    list1[0] 
 
     # 2) Element reference range check 
     # list1[len(list1)] # generates out of bounds error

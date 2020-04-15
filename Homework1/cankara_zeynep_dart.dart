@@ -1,6 +1,7 @@
 main() {
   // 1) Legal Subscripts
-  List<int> list1 = [];
+  List<int> list1 = [1,2,3];
+  list1[0];
 
   // 2) Element reference range check 
   //var a = listGrowable[listGrowable.length]; // index out of bounds error

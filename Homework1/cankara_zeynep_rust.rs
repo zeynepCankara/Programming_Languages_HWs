@@ -5,7 +5,8 @@ use std::collections::HashMap;
 
     // 1) Legal Subscripts
     let array1: [i32; 5] = [1, 2, 3, 4, 5];
-
+    array1[0];
+    
     // 2) Element reference range check 
     // array1[array1.len()] // indec out of bounds error
 
