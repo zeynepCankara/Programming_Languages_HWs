@@ -4,8 +4,68 @@
 
 <script>
 
-// JS comment
-
+// Question 1
+console.log("Q1");
+console.log("For Loop")
+for (let i = 0; i < 1; i++) {
+  console.log(typeof i);
+}
+var counter = 1
+console.log("While Loop")
+while (counter >= 1){
+  console.log(typeof counter);
+  counter -= 1;
+}
+// looping over an iterable
+var classes = ["CS315", 23, undefined];
+console.log("For-in Loop")
+for (i in classes) {
+  console.log(typeof i);
+}
+console.log("Do-while Loop")
+var i = 0;
+do {
+  i += 1;
+  console.log(typeof i);
+} while (i < 1);
+// Question 2 
+console.log("Q2");
+for (let i2 = 0; i2 < 1; i2++) {
+  i2 = i2+1
+  console.log(i2);
+}
+try{console.log(i2)}
+catch(err){
+  console.log("Let init (Block Scope): Can't access variable outside loop")
+}
+for (var i3 = 0; i3 < 1; i3++) {
+  i3 = i3+1
+  console.log(i3);
+}
+try{
+  console.log(i3)
+  console.log("Var init (Global Scope): Can access variable outside loop")
+}
+catch(err){
+  console.log("Var init (Global Scope):Can't access variable outside loop")
+}
+// Question 3
+console.log("Q3");
+for (let i4 = 0; i4 < 5; i4++) {
+  i4 = i4+1
+  console.log("Current i4 (loop control variable) value: ",i4);
+}
+// Question 4
+console.log("Q4");
+var loopEnd = 3
+console.log("End of the loop set to iteration: ", loopEnd);
+for (var i5 = 0; i5 < loopEnd; i5++) {
+  if(i5 == 2){
+    loopEnd = 5
+    console.log("End of the loop changed to iteration: ", loopEnd);
+  }
+}
+console.log("Number of iterations: ",i5);
 
 </script>
 
