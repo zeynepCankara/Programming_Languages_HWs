@@ -18,12 +18,12 @@ Id: 21703381
 (define (sum-of-f-helper k partial)
                       (if (< k 1)
                          partial
-                         sum-of-f-helper((- k 1) (+ k partial)))
-                    )
+                         (sum-of-f-helper (- k 1) (+ (f k) partial) ) ) )
                 
  ;;; sum-of-f-tr, tail recursive version of sum-of-f
 (define (sum-of-f-tr k)
                   (sum-of-f-helper k (f 0)))
+
 
 
  
